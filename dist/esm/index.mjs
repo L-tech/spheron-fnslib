@@ -27,7 +27,7 @@ var FNS = class {
     console.log("Export", exportName);
     let mod = await import(
       /* webpackMode: "lazy", webpackChunkName: "[request]", webpackPreload: true, webpackExclude: /.*\.ts$/ */
-      `./functions/${path}`
+      `./functions/${path}.mjs`
     );
     if (mod.default?.[exportName]) {
       mod = mod.default;

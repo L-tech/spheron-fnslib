@@ -49,7 +49,7 @@ class FNS {
       console.log("Export", exportName);
       let mod = await import(
         /* webpackMode: "lazy", webpackChunkName: "[request]", webpackPreload: true, webpackExclude: /.*\.ts$/ */
-        `./functions/${path}`
+        `./functions/${path}.mjs`
       );
       if ((_a = mod.default) == null ? void 0 : _a[exportName]) {
         mod = mod.default;
