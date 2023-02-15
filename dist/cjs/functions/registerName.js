@@ -21,23 +21,24 @@ __export(registerName_exports, {
   default: () => registerName_default
 });
 module.exports = __toCommonJS(registerName_exports);
+var import_registerHelpers = require("../utils/registerHelpers");
 var import_wrapper = require("../utils/wrapper");
-async function registerName_default({ contracts }, name, address, duration, { value }) {
+async function registerName_default({ contracts }, name, { resolverAddress, value, ...params }) {
   const labels = name.split(".");
   if (labels.length !== 2 || labels[1] !== "fil")
     throw new Error("Currently only .fil TLD registrations are supported");
   (0, import_wrapper.wrappedLabelLengthCheck)(labels[0]);
   const controller = await contracts.getEthRegistrarController();
-  const resolver = await (contracts == null ? void 0 : contracts.getPublicResolver());
-  return controller.populateTransaction.register(
-    name,
-    address,
-    duration,
-    resolver.address,
-    [],
-    true,
-    {
-      value
-    }
+  const _resolver = await contracts.getPublicResolver(
+    void 0,
+    resolverAddress
   );
+  const generatedParams = (0, import_registerHelpers.makeRegistrationData)({
+    name,
+    resolver: _resolver,
+    ...params
+  });
+  return controller.populateTransaction.register(...generatedParams, {
+    value
+  });
 }

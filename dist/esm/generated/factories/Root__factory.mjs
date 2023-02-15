@@ -13,7 +13,7 @@ var _abi = [
     inputs: [
       {
         internalType: "contract FNS",
-        name: "_ens",
+        name: "_fns",
         type: "address"
       }
     ],
@@ -58,7 +58,7 @@ var _abi = [
   {
     constant: true,
     inputs: [],
-    name: "ens",
+    name: "fns",
     outputs: [
       {
         internalType: "contract FNS",

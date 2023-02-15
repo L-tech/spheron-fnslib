@@ -5,7 +5,7 @@ var ContractManager = class {
   getModule = async (name) => {
     const mod = await import(
       /* webpackMode: "lazy", webpackChunkName: "[request]", webpackPreload: true, webpackExclude: /.*\.ts$/ */
-      `../generated/factories/${name}__factory`
+      `../generated/factories/${name}__factory.mjs`
     );
     return mod[`${name}__factory`];
   };

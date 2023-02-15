@@ -1,6 +1,6 @@
-import { Signer } from '@ethersproject/abstract-signer';
-import type { Provider } from '@ethersproject/providers';
-import type { ReverseRegistrar, ReverseRegistrarInterface } from '../ReverseRegistrar';
+import { Signer } from "@ethersproject/abstract-signer";
+import type { Provider } from "@ethersproject/providers";
+import type { ReverseRegistrar, ReverseRegistrarInterface } from "../ReverseRegistrar";
 export declare class ReverseRegistrar__factory {
     static readonly abi: ({
         inputs: {
