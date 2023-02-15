@@ -5,7 +5,7 @@ var ContractManager = class {
   getModule = async (name) => {
     const mod = await import(
       /* webpackMode: "lazy", webpackChunkName: "[request]", webpackPreload: true, webpackExclude: /.*\.ts$/ */
-      `../generated/factories/${name}__factory`
+      `../generated/factories/${name}__factory.mjs`
     );
     return mod[`${name}__factory`];
   };
@@ -30,15 +30,11 @@ var ContractManager = class {
   getReverseRegistrar = this.generateContractGetter("ReverseRegistrar");
   getNameWrapper = this.generateContractGetter("NameWrapper");
   getDNSRegistrar = this.generateContractGetter("DNSRegistrar");
-  getBaseRegistrar = this.generateContractGetter(
-    "BaseRegistrarImplementation"
-  );
+  getBaseRegistrar = this.generateContractGetter("BaseRegistrarImplementation");
   getEthRegistrarController = this.generateContractGetter(
     "ETHRegistrarController"
   );
   getMulticall = this.generateContractGetter("Multicall");
   getBulkRenewal = this.generateContractGetter("BulkRenewal");
 };
-export {
-  ContractManager as default
-};
+export { ContractManager as default };
