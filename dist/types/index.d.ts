@@ -140,13 +140,7 @@ export declare class FNS {
     }>;
     getProfile: (nameOrAddress: string, options?: ({
         contentHash?: boolean | undefined;
-        texts?: boolean | string[] | undefined; /**
-         * Generates a wrapped function from raw and decode exports
-         * @param {string} path - The path of the exported function
-         * @param {FunctionDeps} dependencies - An array of FNS properties
-         * @param {string} exportName - The export name of the target function
-         * @returns {GeneratedRawFunction} - The generated wrapped function
-         */
+        texts?: boolean | string[] | undefined;
         coinTypes?: boolean | string[] | undefined;
     } & {
         resolverAddress?: string | undefined;

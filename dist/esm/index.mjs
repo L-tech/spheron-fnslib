@@ -23,6 +23,8 @@ var FNS = class {
     dependencies.map((dep) => [dep, this[dep]])
   );
   getModule = async (path, exportName) => {
+    console.log("Path", path);
+    console.log("Export", exportName);
     let mod = await import(
       /* webpackMode: "lazy", webpackChunkName: "[request]", webpackPreload: true, webpackExclude: /.*\.ts$/ */
       `./functions/${path}`

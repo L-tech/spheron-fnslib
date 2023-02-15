@@ -188,6 +188,8 @@ export class FNS {
 
   // eslint-disable-next-line class-methods-use-this
   protected getModule = async (path: string, exportName: string) => {
+    console.log("Path", path);
+    console.log("Export", exportName);
     let mod = await import(
       /* webpackMode: "lazy", webpackChunkName: "[request]", webpackPreload: true, webpackExclude: /.*\.ts$/ */
       `./functions/${path}`

@@ -45,6 +45,8 @@ class FNS {
     );
     this.getModule = async (path, exportName) => {
       var _a;
+      console.log("Path", path);
+      console.log("Export", exportName);
       let mod = await import(
         /* webpackMode: "lazy", webpackChunkName: "[request]", webpackPreload: true, webpackExclude: /.*\.ts$/ */
         `./functions/${path}`
