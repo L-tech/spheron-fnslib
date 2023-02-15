@@ -1,6 +1,6 @@
-import { Signer } from '@ethersproject/abstract-signer';
-import type { Provider } from '@ethersproject/providers';
-import type { DefaultReverseResolver, DefaultReverseResolverInterface } from '../DefaultReverseResolver';
+import { Signer } from "@ethersproject/abstract-signer";
+import type { Provider } from "@ethersproject/providers";
+import type { DefaultReverseResolver, DefaultReverseResolverInterface } from "../DefaultReverseResolver";
 export declare class DefaultReverseResolver__factory {
     static readonly abi: ({
         inputs: {

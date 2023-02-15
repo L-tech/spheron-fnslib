@@ -1,11 +1,11 @@
-import type { EventFragment, FunctionFragment, Result } from '@ethersproject/abi';
-import { Interface } from '@ethersproject/abi';
-import type { Listener, Provider } from '@ethersproject/abstract-provider';
-import type { Signer } from '@ethersproject/abstract-signer';
-import type { BigNumber } from '@ethersproject/bignumber';
-import type { BytesLike } from '@ethersproject/bytes';
-import type { BaseContract, CallOverrides, ContractTransaction, Overrides, PopulatedTransaction } from '@ethersproject/contracts';
-import type { OnEvent, PromiseOrValue, TypedEvent, TypedEventFilter, TypedListener } from './common';
+import type { EventFragment, FunctionFragment, Result } from "@ethersproject/abi";
+import { Interface } from "@ethersproject/abi";
+import type { Listener, Provider } from "@ethersproject/abstract-provider";
+import type { Signer } from "@ethersproject/abstract-signer";
+import type { BigNumber } from "@ethersproject/bignumber";
+import type { BytesLike } from "@ethersproject/bytes";
+import type { BaseContract, CallOverrides, ContractTransaction, Overrides, PopulatedTransaction } from "@ethersproject/contracts";
+import type { OnEvent, PromiseOrValue, TypedEvent, TypedEventFilter, TypedListener } from "./common";
 export declare namespace DNSSEC {
     type RRSetWithSignatureStruct = {
         rrset: PromiseOrValue<BytesLike>;
@@ -18,53 +18,53 @@ export declare namespace DNSSEC {
 }
 export interface DNSRegistrarInterface extends Interface {
     functions: {
-        'claim(bytes,bytes)': FunctionFragment;
-        'fns()': FunctionFragment;
-        'oracle()': FunctionFragment;
-        'proveAndClaim(bytes,(bytes,bytes)[],bytes)': FunctionFragment;
-        'proveAndClaimWithResolver(bytes,(bytes,bytes)[],bytes,address,address)': FunctionFragment;
-        'setOracle(address)': FunctionFragment;
-        'setPublicSuffixList(address)': FunctionFragment;
-        'suffixes()': FunctionFragment;
-        'supportsInterface(bytes4)': FunctionFragment;
+        "claim(bytes,bytes)": FunctionFragment;
+        "fns()": FunctionFragment;
+        "oracle()": FunctionFragment;
+        "proveAndClaim(bytes,(bytes,bytes)[],bytes)": FunctionFragment;
+        "proveAndClaimWithResolver(bytes,(bytes,bytes)[],bytes,address,address)": FunctionFragment;
+        "setOracle(address)": FunctionFragment;
+        "setPublicSuffixList(address)": FunctionFragment;
+        "suffixes()": FunctionFragment;
+        "supportsInterface(bytes4)": FunctionFragment;
     };
-    getFunction(nameOrSignatureOrTopic: 'claim' | 'fns' | 'oracle' | 'proveAndClaim' | 'proveAndClaimWithResolver' | 'setOracle' | 'setPublicSuffixList' | 'suffixes' | 'supportsInterface'): FunctionFragment;
-    encodeFunctionData(functionFragment: 'claim', values: [PromiseOrValue<BytesLike>, PromiseOrValue<BytesLike>]): string;
-    encodeFunctionData(functionFragment: 'fns', values?: undefined): string;
-    encodeFunctionData(functionFragment: 'oracle', values?: undefined): string;
-    encodeFunctionData(functionFragment: 'proveAndClaim', values: [
+    getFunction(nameOrSignatureOrTopic: "claim" | "fns" | "oracle" | "proveAndClaim" | "proveAndClaimWithResolver" | "setOracle" | "setPublicSuffixList" | "suffixes" | "supportsInterface"): FunctionFragment;
+    encodeFunctionData(functionFragment: "claim", values: [PromiseOrValue<BytesLike>, PromiseOrValue<BytesLike>]): string;
+    encodeFunctionData(functionFragment: "fns", values?: undefined): string;
+    encodeFunctionData(functionFragment: "oracle", values?: undefined): string;
+    encodeFunctionData(functionFragment: "proveAndClaim", values: [
         PromiseOrValue<BytesLike>,
         DNSSEC.RRSetWithSignatureStruct[],
         PromiseOrValue<BytesLike>
     ]): string;
-    encodeFunctionData(functionFragment: 'proveAndClaimWithResolver', values: [
+    encodeFunctionData(functionFragment: "proveAndClaimWithResolver", values: [
         PromiseOrValue<BytesLike>,
         DNSSEC.RRSetWithSignatureStruct[],
         PromiseOrValue<BytesLike>,
         PromiseOrValue<string>,
         PromiseOrValue<string>
     ]): string;
-    encodeFunctionData(functionFragment: 'setOracle', values: [PromiseOrValue<string>]): string;
-    encodeFunctionData(functionFragment: 'setPublicSuffixList', values: [PromiseOrValue<string>]): string;
-    encodeFunctionData(functionFragment: 'suffixes', values?: undefined): string;
-    encodeFunctionData(functionFragment: 'supportsInterface', values: [PromiseOrValue<BytesLike>]): string;
-    decodeFunctionResult(functionFragment: 'claim', data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: 'fns', data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: 'oracle', data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: 'proveAndClaim', data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: 'proveAndClaimWithResolver', data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: 'setOracle', data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: 'setPublicSuffixList', data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: 'suffixes', data: BytesLike): Result;
-    decodeFunctionResult(functionFragment: 'supportsInterface', data: BytesLike): Result;
+    encodeFunctionData(functionFragment: "setOracle", values: [PromiseOrValue<string>]): string;
+    encodeFunctionData(functionFragment: "setPublicSuffixList", values: [PromiseOrValue<string>]): string;
+    encodeFunctionData(functionFragment: "suffixes", values?: undefined): string;
+    encodeFunctionData(functionFragment: "supportsInterface", values: [PromiseOrValue<BytesLike>]): string;
+    decodeFunctionResult(functionFragment: "claim", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "fns", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "oracle", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "proveAndClaim", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "proveAndClaimWithResolver", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "setOracle", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "setPublicSuffixList", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "suffixes", data: BytesLike): Result;
+    decodeFunctionResult(functionFragment: "supportsInterface", data: BytesLike): Result;
     events: {
-        'Claim(bytes32,address,bytes)': EventFragment;
-        'NewOracle(address)': EventFragment;
-        'NewPublicSuffixList(address)': EventFragment;
+        "Claim(bytes32,address,bytes)": EventFragment;
+        "NewOracle(address)": EventFragment;
+        "NewPublicSuffixList(address)": EventFragment;
     };
-    getEvent(nameOrSignatureOrTopic: 'Claim'): EventFragment;
-    getEvent(nameOrSignatureOrTopic: 'NewOracle'): EventFragment;
-    getEvent(nameOrSignatureOrTopic: 'NewPublicSuffixList'): EventFragment;
+    getEvent(nameOrSignatureOrTopic: "Claim"): EventFragment;
+    getEvent(nameOrSignatureOrTopic: "NewOracle"): EventFragment;
+    getEvent(nameOrSignatureOrTopic: "NewPublicSuffixList"): EventFragment;
 }
 export interface ClaimEventObject {
     node: string;
@@ -103,7 +103,7 @@ export interface DNSRegistrar extends BaseContract {
         /**
          * Claims a name by proving ownership of its DNS equivalent.
          * @param name The name to claim, in DNS wire format.
-         * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_ens.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
+         * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_fns.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
          */
         claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
@@ -128,7 +128,7 @@ export interface DNSRegistrar extends BaseContract {
     /**
      * Claims a name by proving ownership of its DNS equivalent.
      * @param name The name to claim, in DNS wire format.
-     * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_ens.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
+     * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_fns.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
      */
     claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
         from?: PromiseOrValue<string>;
@@ -153,7 +153,7 @@ export interface DNSRegistrar extends BaseContract {
         /**
          * Claims a name by proving ownership of its DNS equivalent.
          * @param name The name to claim, in DNS wire format.
-         * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_ens.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
+         * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_fns.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
          */
         claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<void>;
         fns(overrides?: CallOverrides): Promise<string>;
@@ -166,18 +166,18 @@ export interface DNSRegistrar extends BaseContract {
         supportsInterface(interfaceID: PromiseOrValue<BytesLike>, overrides?: CallOverrides): Promise<boolean>;
     };
     filters: {
-        'Claim(bytes32,address,bytes)'(node?: PromiseOrValue<BytesLike> | null, owner?: PromiseOrValue<string> | null, dnsname?: null): ClaimEventFilter;
+        "Claim(bytes32,address,bytes)"(node?: PromiseOrValue<BytesLike> | null, owner?: PromiseOrValue<string> | null, dnsname?: null): ClaimEventFilter;
         Claim(node?: PromiseOrValue<BytesLike> | null, owner?: PromiseOrValue<string> | null, dnsname?: null): ClaimEventFilter;
-        'NewOracle(address)'(oracle?: null): NewOracleEventFilter;
+        "NewOracle(address)"(oracle?: null): NewOracleEventFilter;
         NewOracle(oracle?: null): NewOracleEventFilter;
-        'NewPublicSuffixList(address)'(suffixes?: null): NewPublicSuffixListEventFilter;
+        "NewPublicSuffixList(address)"(suffixes?: null): NewPublicSuffixListEventFilter;
         NewPublicSuffixList(suffixes?: null): NewPublicSuffixListEventFilter;
     };
     estimateGas: {
         /**
          * Claims a name by proving ownership of its DNS equivalent.
          * @param name The name to claim, in DNS wire format.
-         * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_ens.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
+         * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_fns.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
          */
         claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;
@@ -203,7 +203,7 @@ export interface DNSRegistrar extends BaseContract {
         /**
          * Claims a name by proving ownership of its DNS equivalent.
          * @param name The name to claim, in DNS wire format.
-         * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_ens.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
+         * @param proof A DNS RRSet proving ownership of the name. Must be verified        in the DNSSEC oracle before calling. This RRSET must contain a TXT        record for '_fns.' + name, with the value 'a=0x...'. Ownership of        the name will be transferred to the address specified in the TXT        record.
          */
         claim(name: PromiseOrValue<BytesLike>, proof: PromiseOrValue<BytesLike>, overrides?: Overrides & {
             from?: PromiseOrValue<string>;

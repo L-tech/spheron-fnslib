@@ -1,6 +1,6 @@
-import { Signer } from '@ethersproject/abstract-signer';
-import type { Provider } from '@ethersproject/providers';
-import type { DNSRegistrar, DNSRegistrarInterface } from '../DNSRegistrar';
+import { Signer } from "@ethersproject/abstract-signer";
+import type { Provider } from "@ethersproject/providers";
+import type { DNSRegistrar, DNSRegistrarInterface } from "../DNSRegistrar";
 export declare class DNSRegistrar__factory {
     static readonly abi: ({
         inputs: {

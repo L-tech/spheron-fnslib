@@ -21,16 +21,12 @@ export type RegistrationTuple = [
     name: string,
     owner: string,
     duration: number,
-    secret: string,
     resolver: string,
     data: string[],
-    reverseRecord: boolean,
-    ownerControlledFuses: number
+    reverseRecord: boolean
 ];
 export declare const randomSecret: () => string;
-export declare const makeCommitmentData: ({ name, owner, duration, resolver, records, reverseRecord, fuses, secret, }: Omit<RegistrationParams, "secret"> & {
-    secret?: string | undefined;
-} & {
+export declare const makeCommitmentData: ({ name, owner, duration, resolver, records, reverseRecord, }: CommitmentParams & {
     secret: string;
 }) => RegistrationTuple;
 export declare const makeRegistrationData: (params: RegistrationParams) => RegistrationTuple;

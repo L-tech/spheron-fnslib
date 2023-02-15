@@ -1,6 +1,6 @@
-import { Signer } from '@ethersproject/abstract-signer';
-import type { Provider } from '@ethersproject/providers';
-import type { BaseRegistrarImplementation, BaseRegistrarImplementationInterface } from '../BaseRegistrarImplementation';
+import { Signer } from "@ethersproject/abstract-signer";
+import type { Provider } from "@ethersproject/providers";
+import type { BaseRegistrarImplementation, BaseRegistrarImplementationInterface } from "../BaseRegistrarImplementation";
 export declare class BaseRegistrarImplementation__factory {
     static readonly abi: ({
         inputs: {

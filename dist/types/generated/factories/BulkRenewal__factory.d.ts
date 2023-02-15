@@ -1,6 +1,6 @@
-import { Signer } from '@ethersproject/abstract-signer';
-import type { Provider } from '@ethersproject/providers';
-import type { BulkRenewal, BulkRenewalInterface } from '../BulkRenewal';
+import { Signer } from "@ethersproject/abstract-signer";
+import type { Provider } from "@ethersproject/providers";
+import type { BulkRenewal, BulkRenewalInterface } from "../BulkRenewal";
 export declare class BulkRenewal__factory {
     static readonly abi: ({
         inputs: {

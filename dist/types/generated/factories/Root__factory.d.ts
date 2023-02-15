@@ -1,6 +1,6 @@
-import { Signer } from '@ethersproject/abstract-signer';
-import type { Provider } from '@ethersproject/providers';
-import type { Root, RootInterface } from '../Root';
+import { Signer } from "@ethersproject/abstract-signer";
+import type { Provider } from "@ethersproject/providers";
+import type { Root, RootInterface } from "../Root";
 export declare class Root__factory {
     static readonly abi: ({
         inputs: {

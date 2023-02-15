@@ -27,7 +27,6 @@ __export(registerHelpers_exports, {
 module.exports = __toCommonJS(registerHelpers_exports);
 var import_abi = require("@ethersproject/abi");
 var import_keccak256 = require("@ethersproject/keccak256");
-var import_fuses = require("./fuses");
 var import_labels = require("./labels");
 var import_normalise = require("./normalise");
 var import_recordHelpers = require("./recordHelpers");
@@ -41,15 +40,12 @@ const makeCommitmentData = ({
   duration,
   resolver,
   records,
-  reverseRecord,
-  fuses,
-  secret
+  reverseRecord
 }) => {
   var _a;
   const labelHash = (0, import_labels.labelhash)(name.split(".")[0]);
   const hash = (0, import_normalise.namehash)(name);
   const resolverAddress = resolver.address;
-  const fuseData = (0, import_fuses.hasFuses)(fuses) ? (0, import_fuses.encodeFuses)(fuses, "child") : 0;
   if (reverseRecord) {
     if (!records) {
       records = { coinTypes: [{ key: "ETH", value: owner }] };
@@ -60,16 +56,7 @@ const makeCommitmentData = ({
     }
   }
   const data = records ? (0, import_recordHelpers.generateRecordCallArray)(hash, records, resolver) : [];
-  return [
-    labelHash,
-    owner,
-    duration,
-    secret,
-    resolverAddress,
-    data,
-    !!reverseRecord,
-    fuseData
-  ];
+  return [labelHash, owner, duration, resolverAddress, data, !!reverseRecord];
 };
 const makeRegistrationData = (params) => {
   const commitmentData = makeCommitmentData(params);

@@ -1,6 +1,6 @@
-import { Signer } from '@ethersproject/abstract-signer';
-import type { Provider } from '@ethersproject/providers';
-import type { NameWrapper, NameWrapperInterface } from '../NameWrapper';
+import { Signer } from "@ethersproject/abstract-signer";
+import type { Provider } from "@ethersproject/providers";
+import type { NameWrapper, NameWrapperInterface } from "../NameWrapper";
 export declare class NameWrapper__factory {
     static readonly abi: ({
         inputs: {
